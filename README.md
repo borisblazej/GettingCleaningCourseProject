@@ -1,6 +1,6 @@
 # Course Project for "Getting and Cleaning Data"
 
-## Task
+## Instructions
 
 The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set.
 
@@ -42,4 +42,19 @@ You should create one R script called run_analysis.R that does the following.
 * CodeBook.md     ... Description of variables and transformations
 * README.md     ... this file!
 * run_analysis.R  ... R-Script that executes above steps
-* UCI HAR Dataset/    ... Original data folder
+* tidy_average_data.txt   ... resulting data set as produced by run_analysis.R
+
+## Brief description of code
+
+* Download and unzip data (if not yet available locally)
+* Reading all relevant files (data and labels) into R
+* Combination of datasets by using cbind and rbind 
+  * Variables: subject, activity_levels, 561 original features (see codebook for details)
+  * Cases: 10.299 (combination of train and test data)
+* Reduce the set of variables to those matching "mean()" or "std()"
+  * Variables: subject, activity_levels, 66 original features
+  * Cases: still 10.299
+* Replace activity codes (1-6) by descriptive labels (via join and select/re-sort)
+  * Result: tidy_data (not written to file!)
+* Group tidy_data by subject and activity and calculate mean for each (180) combination
+  * Result: tidy_average_data.txt

@@ -12,12 +12,12 @@ X_test <- read_table2("UCI HAR Dataset/test/X_test.txt",
 y_test <- read_csv("UCI HAR Dataset/test/y_test.txt", 
                    col_names = FALSE)
 X_train <- read_table2("UCI HAR Dataset/train/X_train.txt", 
-                      col_names = FALSE)
+                       col_names = FALSE)
 y_train <- read_csv("UCI HAR Dataset/train/y_train.txt", 
-                   col_names = FALSE)
+                    col_names = FALSE)
 features <- as.vector(read_table2("UCI HAR Dataset/features.txt", 
-                        col_names = FALSE, col_types = cols(`1` = col_skip(), 
-                                                            X1 = col_skip())))
+                                  col_names = FALSE, col_types = cols(`1` = col_skip(), 
+                                                                      X1 = col_skip())))
 activity_labels <- read_table2("UCI HAR Dataset/activity_labels.txt", 
                                col_names = FALSE)
 
@@ -56,5 +56,3 @@ names(y_tidy) <- "activity"
 X_means <- colMeans(X_subset)
 X_means <- data.frame(X_means)
 names(X_means) <- "mean"
-
-

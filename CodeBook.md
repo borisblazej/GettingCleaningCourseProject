@@ -3,9 +3,11 @@ This file explains step-by-step the procedure and the variables in the script ru
 The steps 1-5 follow directly the instructions of the project - alos found in the README.md under "Work Steps"
 
 ## Load necessary Libraries
+```{r include=FALSE}
     library(readr)
     library(dplyr)
     library(stringr)
+```
 
 ## 1. Merge the training and the test sets to create one data set
 ## The resulting dataset is in variables X,y

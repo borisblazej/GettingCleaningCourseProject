@@ -56,3 +56,9 @@ names(y_tidy) <- "activity"
 X_means <- colMeans(X_subset)
 X_means <- data.frame(X_means)
 names(X_means) <- "mean"
+
+## Write resulting datasets to files
+write.table(X, file = "X.txt", row.name=FALSE)
+write.table(y_tidy, file = "y.txt", row.name=FALSE)
+write.table(X_means, file = "X_means.txt", row.name=FALSE)
+
